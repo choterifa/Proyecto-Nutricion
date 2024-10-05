@@ -1,0 +1,164 @@
+/* LETRAS */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+}
+
+.inicio__titulo {
+    font-family: 'Neue Haas Grotesk Display Pro', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+.inicio__contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100vh;
+}
+
+/*Seccion del nav*/
+.inicio__nav__logo {
+    width: 80px;
+}
+
+.inicio__nav__logo--img {
+    width: 100%;
+    height: 100%;
+}
+
+.inicio__nav__enlaces {
+    display: flex;
+    gap: 10px;
+}
+
+
+/*Seccion principal*/
+.inicio__imagen {
+    /*Contenedor de la imagen*/
+    width: 40%;
+    height: 75vh;
+    border-radius: 50px;
+    margin-left: -45px;
+}
+
+.inicio__imagen--img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.inicio__textos {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 12px;
+    width: 45%;
+    color: #343434;
+    margin-left: 40px;
+}
+
+.inicio__titulo {
+    font-size: 4.7rem;
+}
+
+.inicio__titulo--salud {
+    background: linear-gradient(90deg, #c8ddc2, #c8dbc0);
+    background-clip: text;
+    /* Aplica el degradado solo al texto */
+    -webkit-text-fill-color: transparent;
+    /* Hace que el texto en sí sea transparente */
+}
+
+.inicio__desc {
+    font-family: 'Neue Haas Grotesk Display Pro', Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    color: #909090;
+    width: 70%;
+}
+
+.inicio__btn__contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inicio__btn {
+    font-family: 'Neue Haas Grotesk Display Pro';
+    font-size: 15px;
+    font-weight: 500;
+    width: 210px;
+    height: 48px;
+    filter: blur(.5);
+    background: #343434;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 20px;
+    border: none;
+    color: white;
+}
+
+/*Seccion del nutriologo imagen*/
+
+.nutriologo__container {
+    width: 230px;
+    height: 83px;
+    background-color: #f3f3f3;
+    border-radius: 70px;
+    margin-top: 40px;
+    box-shadow: 1px 3px 10px -1px rgba(77, 76, 76, 0.22);
+}
+
+.nutriologo__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.imagen__nutriologo {
+    display: block;
+    margin: 0;
+    height: 68%;
+}
+
+
+.imagen__nutriologo--img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.nutriologo__flex__textos {
+    display: flex;
+    width: 55%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+.nutriologo__text {
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+.nutriologo__desc {
+    font-size: 14px;
+    margin: 0;
+    /* color: #909090; */
+}

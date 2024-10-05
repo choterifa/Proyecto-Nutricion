@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/logins.css">
+
+    <!-- Boostrap Utilidades-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Boostrap y fontawesome icons-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/c04f55e6fc.js" crossorigin="anonymous"></script>
+    <!-- Icono de la pagina -->
+    <link rel="icon" href="/logo.png" type="image/x-icon">
+    <title>Inicio</title>
+    <script src="https://kit.fontawesome.com/c04f55e6fc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Pagina principal-->
+    <section class="form-section">
+
+        <div class="form__double"> <!--Para la imagen del lateral-->
+
+            <div class="form-container form__container--registro"><!--importante-->
+
+                <h1 class="form__titulo">Registrar Cliente</h1>
+                <h2 class="form__desc">Ingrese sus datos a continuación para crear su cuenta y comenzar
+                </h2>
+
+                <form method="post" action="{{ url_for('iniciar_sesion') }}"> <!--Se pasa la funcion-->
+                    <!-- Pedir Nombre -->
+                    <div class="input-container">
+                        <!-- <label for="correo">Correo</label> -->
+
+                        <i class="bi bi-person-fill-add icon"></i>
+                        <input type="text" onpaste="return false;"
+                            class="form__inputs {% if correo_no_encontrado %}is-invalid{% endif %} custom-placeholder"
+                            id="correo_no_encontrado" name="correo" maxlength="30" required placeholder="Nombres">
+                    </div>
+                    <!-- Pedir apellidos -->
+                    <div class="input-container">
+                        <!-- <label for="correo">Correo</label> -->
+                        <i class="bi bi-person-fill-add icon"></i>
+                        <input type="text" onpaste="return false;"
+                            class="form__inputs {% if correo_no_encontrado %}is-invalid{% endif %} custom-placeholder"
+                            id="correo_no_encontrado" name="correo" maxlength="30" required placeholder="Apellidos">
+                    </div>
+
+                    <!--Pedir fecha nacimiento-->
+                    <div class="input-container">
+                        <!-- <label for="correo">Correo</label> -->
+                        <i class="bi bi-calendar-event icon"></i>
+                        <input type="date" onpaste="return false;"
+                            class="form__inputs {% if correo_no_encontrado %}is-invalid{% endif %} custom-placeholder"
+                            id="correo_no_encontrado" name="correo" maxlength="30" required>
+
+                    </div>
+                    <!--Pedir correo -->
+                    <div class="input-container">
+                        <!-- <label for="correo">Correo</label> -->
+                        <i class="bi bi-envelope-at-fill icon"></i>
+                        <input type="email" onpaste="return false;"
+                            class="form__inputs {% if correo_no_encontrado %}is-invalid{% endif %} custom-placeholder"
+                            id="correo_no_encontrado" name="correo" maxlength="30" required
+                            placeholder="Correo Electronico">
+                    </div>
+                    <!--Pedir telefono-->
+                    <div class="input-container">
+                        <!-- <label for="correo">Correo</label> -->
+                        <i class="bi bi-telephone icon"></i>
+                        <input type="tel" onpaste="return false;"
+                            class="form__inputs {% if correo_no_encontrado %}is-invalid{% endif %} custom-placeholder"
+                            id="correo_no_encontrado" name="correo" maxlength="30" required placeholder="Teléfono"
+                            pattern="[0-9]{10}">
+                    </div>
+                    <!--Pedir sexo-->
+                    <div class="input-container">
+                        <!-- <i class="bi bi-gender-ambiguous icon"></i>  -->
+                        <select class="form__inputs custom-placeholder" id="genero" name="genero" required>
+                            <option value="" disabled selected>Selecciona el género</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                        </select>
+                    </div>
+
+                    <!-- Enviar informacion -->
+                    <button type="submit" class="form__inputs form__inputs--enviar">
+                        registrar cliente
+                    </button>
+                </form>
+
+
+                <!--Extras-->
+                <!-- <a class="form-link form__inputs " href="/inicio_sesion.html">Salir</a> -->
+            </div>
+
+            <!--Imagen del registro-->
+            <div class="form__imagen__container">
+                <figure class="form__imagen">
+                    <img src="" class="form__imagen--img">
+                </figure>
+            </div>
+
+
+        </div>
+
+
+
+
+    </section> <!--Fin Hero-->
+
+
+</body>
+
+</html>
